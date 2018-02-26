@@ -28,6 +28,7 @@ The goals / steps of this project are the following:
 [image7]: ./data/Sign4.tiff "Traffic Sign 4"
 [image8]: ./data/Sign5.tiff "Traffic Sign 5"
 [image9]: ./data/Sign6.tiff "Traffic Sign 6"
+[image10]: ./examples/Best5Probabilities.png "Best 5 Probabilities for Web Images"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -155,23 +156,71 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 6 traffic signs, which gives an accuracy of 83.3%. This compares favorably to the accuracy on the test set of 93.17%
 
-#### 3. Describe how certain the model is when predicting on each of the six new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the six new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability.
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the last cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is absolutely sure that this is a Road Work sign (probability of 100%), and the image does contain a Road Work sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.00         			| Road Work  									| 
+| 0.00     				| Speed Limit (20km/h)							|
+| 0.00					| Speed Limit (20km/h)							|
+| 0.00	      			| Speed Limit (20km/h)							|
+| 0.00				    | Speed Limit (20km/h)							|
 
 
-For the second image ... 
+For the second image, the model is relatively sure that this is a End of no passing (probability of > 99%), the correct sign (No passing) is its third choice also its probability is low (< 0.01%). This is due to the visual similairites of the two signs. The top five soft max probabilities were
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.99649      			| End of no passing 					| 
+| 0.00029  				| Priority road							|
+| 0.000005				| No passing							|
+| 1.29e-09	   			| Slippery road							|
+| 1.789e-13		        | End of no passing by vehicles	over 3.5|
 
+For the third image, the model is absolutely sure that this is a Yield sign (probability of 100%), and the image does contain a Yield sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Yield		 									| 
+| 0.00     				| Speed Limit (20km/h)							|
+| 0.00					| Speed Limit (30km/h)							|
+| 0.00	      			| Speed Limit (50km/h)							|
+| 0.00				    | Speed Limit (60km/h)							|
+
+For the fourth image, the model is absolutely sure that this is a Wild Animals Crossing sign (probability of 100%), and the image does contain a Wild Animals Crossing sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Wild Animals Crossing 						| 
+| 0.00     				| Double Curve									|
+| 0.00					| Speed Limit (30km/h)							|
+| 0.00	      			| Speed Limit (20km/h)							|
+| 0.00				    | Speed Limit (50km/h)							|
+
+For the fifth image, the model is absolutely sure that this is a Right-of-way sign (probability of 100%), and the image does contain a Right-of-way sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Right-of-way at the next intersetction		| 
+| 0.00     				| Speed Limit (20km/h)							|
+| 0.00					| Speed Limit (30km/h)							|
+| 0.00	      			| Speed Limit (50km/h)							|
+| 0.00				    | Speed Limit (60km/h)							|
+
+For the sixth image, the model is absolutely sure that this is a Stop sign (probability of 100%), and the image does contain a Stop sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Stop											| 
+| 0.00     				| Speed Limit (20km/h)							|
+| 0.00					| Speed Limit (30km/h)							|
+| 0.00	      			| Speed Limit (50km/h)							|
+| 0.00				    | Speed Limit (60km/h)							|
+
+These results are shown in the following figure:
+
+![alt text][image10]
