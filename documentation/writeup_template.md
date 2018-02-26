@@ -1,15 +1,15 @@
 # **Traffic Sign Recognition** 
 
-## Introduction
+## Writeup
 
-In this project, we will use deep neural networks and convolutional neural networks to classify traffic signs. We will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, we will try out your model on images of German traffic signs found on the web.
+### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
 
 ---
 
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
-* Load the data set
+* Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
@@ -19,15 +19,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization1.png "Visualization: Plotting the count of each sign"
-[image2]: ./examples/visualization2.png "Visualization: Plotting distribution of classes in the training and validation sets"
-[image3]: ./examples/rgb2yuv.png "RGB to YUV Conversion"
-[image4]: ./examples/random_noise.jpg "Random Noise"
-[image5]: ./examples/placeholder.png "Traffic Sign 1"
-[image6]: ./examples/placeholder.png "Traffic Sign 2"
-[image7]: ./examples/placeholder.png "Traffic Sign 3"
-[image8]: ./examples/placeholder.png "Traffic Sign 4"
-[image9]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./examples/visualization.jpg "Visualization"
+[image2]: ./examples/grayscale.jpg "Grayscaling"
+[image3]: ./examples/random_noise.jpg "Random Noise"
+[image4]: ./examples/placeholder.png "Traffic Sign 1"
+[image5]: ./examples/placeholder.png "Traffic Sign 2"
+[image6]: ./examples/placeholder.png "Traffic Sign 3"
+[image7]: ./examples/placeholder.png "Traffic Sign 4"
+[image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -37,51 +36,48 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/sameha/CarND-Traffic-Sign-Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
-#### 1. Provide a basic summary of the data set.
+#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is 34,799 samples
-* The size of the validation set is 4,410 samples
-* The size of test set is 12,630 samples
-* The shape of a traffic sign image is 32x32x3
-* The number of unique classes/labels in the data set is 43 classes, 0 -> 42
+* The size of training set is ?
+* The size of the validation set is ?
+* The size of test set is ?
+* The shape of a traffic sign image is ?
+* The number of unique classes/labels in the data set is ?
 
 #### 2. Include an exploratory visualization of the dataset.
 
-For exploratory visualization of the data set. We plotted the count of each sign as well as the distribution of classes in the training and validation sets.
-
-##### **Plotting the count of each sign**
-
-The following graph shows the count for each sign in the German Traffic Signs Database. It clearly shows that the distribution for each class is not equal, and that some classes (like class #1 or #2) are more than **ten times** the frequency of other classes (like class #0 or #19).
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
 ![alt text][image1]
 
-##### **Plotting distribution of classes in the training and validation sets**
+### Design and Test a Model Architecture
 
-The following graph shows the normalized histograms for the training, validation, and test sets as well as all data combined. As shown from before, it is clear that the frequency of each class is not equal to other classes.
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+
+As a first step, I decided to convert the images to grayscale because ...
+
+Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-In addition, the graph shows that the training, validation, and test sets have been properly created, as their distribution looks similar.
+As a last step, I normalized the image data because ...
 
+I decided to generate additional data because ... 
 
-### Design and Test a Model Architecture
+To add more data to the the data set, I used the following techniques because ... 
 
-#### 1. Data Preprocessing
-
-As a first step, I decided to convert the images to the YUV scale as it has shown to produce better results than RGB in my experiments, as well as in other research.
-
-Here is an example of four traffic sign images before and after converting.
+Here is an example of an original image and an augmented image:
 
 ![alt text][image3]
 
-As a last step, I normalized the image data because having features within -1 --> 1 range produces better results for deep learning.
+The difference between the original data set and the augmented data set is the following ... 
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -171,4 +167,5 @@ For the second image ...
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
 
