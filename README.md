@@ -75,7 +75,7 @@ In addition, the graph shows that the training, validation, and test sets have b
 
 #### 1. Data Preprocessing
 
-As a first step, I decided to convert the images to the YUV scale as it has shown to produce better results than RGB in my experiments, as well as in other research.
+As a first step, I decided to convert the images to the YUV scale as it has shown to produce better results than RGB in my experiments, as well as in a [published baseline model on this problem](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf).
 
 Here is an example of four traffic sign images before and after converting.
 
